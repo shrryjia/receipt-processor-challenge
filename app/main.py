@@ -8,10 +8,6 @@ app = Flask(__name__)
 # In-memory storage for receipts
 receipts_storage = {}
 
-@app.route("/")
-def hello():
-    return "Hello World!"
-
 @app.route('/receipts/process', methods=['POST'])
 def process_receipt():
     data = request.json
